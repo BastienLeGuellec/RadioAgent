@@ -237,11 +237,11 @@ if __name__ == "__main__":
         if agent_response.upper().endswith("UP"):
             move_result = agent.move_slice("UP")
             print(move_result)
-            user_query = "Okay, I've moved to the next slice. What are your observations now?"
+            user_query = move_result
         elif agent_response.upper().endswith("DOWN"):
             move_result = agent.move_slice("DOWN")
             print(move_result)
-            user_query = "Okay, I've moved to the previous slice. What are your observations now?"
+            user_query = move_result
         elif agent_response.upper().startswith("DIAGNOSIS:"):
             print(f"Final Diagnosis: {agent_response}")
             diagnosis_made = True
